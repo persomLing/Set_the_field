@@ -103,13 +103,21 @@ class Store {
         console.log('c', _.cloneDeep(value));
         const nowRightData = _.cloneDeep(this.RightData)
 
-        const deWeight = (parentName: string | null, customName: string, nowArry: any, isparentName = false) => {
+        const deWeight = (parentName: string | null,
+            customName: string,
+            nowArry: any,
+            isparentName = false,
+            childrenRes?: any,
+        ) => {
             let newCustomName = `${customName}-副本(0)`
             let newParentName = `${parentName}-副本(0)`
-            let nowdata: any = nowRightData.get(isparentName ? newParentName : `${newCustomName}&&${parentName}`)
+            let nowdata = nowRightData.get(isparentName ? newParentName : `${newCustomName}&&${parentName}`)
+            if (!_.isNil(childrenRes)) {
+                nowdata = _.find(childrenRes, ['customName', newCustomName])
+            }
             let number = 0;
             // 有重复值就加1， 没有就自动退出
-            while (!_.isNil(nowdata)) {
+            while (!_.isNil(nowdata) || !_.isEmpty(nowdata)) {
                 number += 1;
                 if (isparentName) {
                     newParentName = `${parentName}-副本(${number})`;
@@ -117,7 +125,12 @@ class Store {
                     newCustomName = `${customName}-副本(${number})`;
                 }
 
-                nowdata = nowRightData.get(isparentName ? newParentName : `${newCustomName}&&${parentName}`)
+                if (childrenRes) {
+                    nowdata = _.find(childrenRes, ['customName', newCustomName])
+                } else {
+                    nowdata = nowRightData.get(isparentName ? newParentName : `${newCustomName}&&${parentName}`)
+                }
+
             }
 
             if (isparentName) {
@@ -146,7 +159,7 @@ class Store {
             } else {
                 const nowres = nowRightData.get(v.parentName) || [];
                 const nowArry = _.find(nowres?.children, ['customName', v.customName]);
-                const obj = deWeight(v.parentName, v.customName, nowArry)
+                const obj = deWeight(v.parentName, v.customName, nowArry, false, nowres?.children)
                 nowRightData.set(v.parentName, { parentName: v.parentName, children: [...nowres?.children, obj.data] })
             }
         })
