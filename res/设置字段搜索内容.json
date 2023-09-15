@@ -1,0 +1,1542 @@
+{
+  "data": [
+    {
+      "indicatorCode": "ability_indicator",
+      "indicatorName": "能力指标",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 6,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "f_wavg",
+          "indicatorName": "行业选股收益-聚合行业",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 1,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "i_wavg",
+          "indicatorName": "行业选股收益-聚合报告期",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "f_ar",
+          "indicatorName": "行业配置能力-聚合行业",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 3,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "avg_i",
+          "indicatorName": "行业配置能力-聚合报告期",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 4,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "timing_win_rate",
+          "indicatorName": "区间仓位择时总胜率",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "avg_position_selection_contribution",
+          "indicatorName": "区间权益仓位择时平均贡献",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 6,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "position_selection_contribution",
+          "indicatorName": "单期权益仓位择时贡献",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 7,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "is_win",
+          "indicatorName": "单期权益仓位择时胜负",
+          "parentCode": "ability_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 8,
+          "indicatorDataType": "STRING",
+          "children": []
+        }
+      ]
+    },
+    {
+      "indicatorCode": "industry_allocation",
+      "indicatorName": "行业配置",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 8,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "f_i_ratio",
+          "indicatorName": "行业配置比例",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "e_i_ratio",
+          "indicatorName": "行业超额配置比例",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 4,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cr1",
+          "indicatorName": "前一大行业占比",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cr2",
+          "indicatorName": "前二大行业占比",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 6,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cr3",
+          "indicatorName": "前三大行业占比",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 7,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cr5",
+          "indicatorName": "前五大行业占比",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 8,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ito3",
+          "indicatorName": "前三大行业周转率",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 9,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ito5",
+          "indicatorName": "前五大行业周转率",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 10,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "industry_measurement",
+          "indicatorName": "行业仓位测算",
+          "parentCode": "industry_allocation",
+          "indicatorLevel": 2,
+          "indicatorSort": 11,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        }
+      ]
+    },
+    {
+      "indicatorCode": "performance_attribution",
+      "indicatorName": "业绩归因",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 9,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "b_execess_ret",
+          "indicatorName": "Brinson-总超额收益",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 1,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "b_ar",
+          "indicatorName": "Brinson-行业配置收益AR",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "b_sr",
+          "indicatorName": "Brinson-选股收益SR",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 3,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "income_effect",
+          "indicatorName": "债券持仓Campisi-收入效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 4,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "yield_effect",
+          "indicatorName": "债券持仓Campisi-国债效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "spread_effect",
+          "indicatorName": "债券持仓Campisi-利差效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 6,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "pick_effect",
+          "indicatorName": "债券持仓Campisi-券种选择效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 7,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "total_effect",
+          "indicatorName": "债券持仓Campisi-拟合总收益",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 8,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cs_factor_intercept",
+          "indicatorName": "净值回归Campisi-超额回报",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 9,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cs_factor_yield",
+          "indicatorName": "净值回归Campisi-久期因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 10,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cs_factor_slope",
+          "indicatorName": "净值回归Campisi-利率曲线因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 11,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cs_factor_credit",
+          "indicatorName": "净值回归Campisi-信息利差因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 12,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cs_factor_default",
+          "indicatorName": "净值回归Campisi-违约因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 13,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "cs_factor_convert",
+          "indicatorName": "净值回归Campisi-可转债因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 14,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "style_factor_ctb_sum",
+          "indicatorName": "风险归因-风格因子单期收益贡献",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 15,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "industry_factor_ctb_sum",
+          "indicatorName": "风险归因-行业因子单期收益贡献",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 16,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "style_factor_ctb",
+          "indicatorName": "风险归因-风格因子收益贡献明细",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 17,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "industry_factor_ctb",
+          "indicatorName": "风险归因-行业因子收益贡献明细",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 18,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ch_intercept",
+          "indicatorName": "Carhart-超额收益",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 19,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ch_smb",
+          "indicatorName": "Carhart-市值因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 20,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ch_hml",
+          "indicatorName": "Carhart-账面市值比因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 21,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ch_momentum",
+          "indicatorName": "Carhart-动量因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 22,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ch_market_premium",
+          "indicatorName": "Carhart-市场因子",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 23,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ch_R2",
+          "indicatorName": "Carhart-拟合优度",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 24,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "a_stock_inter_attr",
+          "indicatorName": "大类资产归因- A股配置效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 25,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hk_stock_inter_attr",
+          "indicatorName": "大类资产归因-港股配置效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 26,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "pure_bond_inter_attr",
+          "indicatorName": "大类资产归因-纯债配置效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 27,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "convertible_bond_inter_attr",
+          "indicatorName": "大类资产归因-可转债配置效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 28,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "security_selection_inter_attr",
+          "indicatorName": "大类资产归因-证券选择效应",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 29,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fund_inter_return",
+          "indicatorName": "大类资产归因-基金收益率",
+          "parentCode": "performance_attribution",
+          "indicatorLevel": 2,
+          "indicatorSort": 30,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        }
+      ]
+    },
+    {
+      "indicatorCode": "allocation_indicator",
+      "indicatorName": "资产配置",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 7,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "equity_asset_ratio",
+          "indicatorName": "股票占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 1,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fixed_income_asset_ratio",
+          "indicatorName": "固收占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "money_asset_ratio",
+          "indicatorName": "现金占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 3,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "other_asset_ratio",
+          "indicatorName": "其他占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 4,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fund_asset_ratio",
+          "indicatorName": "基金占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "money_asset_net_ratio",
+          "indicatorName": "现金占资产净值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 8,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "other_asset_net_ratio",
+          "indicatorName": "其他占资产净值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 9,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fund_asset_net_ratio",
+          "indicatorName": "基金占资产净值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 10,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "stock_hk_connect_asset_ratio",
+          "indicatorName": "港股占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 11,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "stock_hk_connect_asset_net_ratio",
+          "indicatorName": "港股占资产净值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 12,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "stock_hk_connect_asset_equity_ratio",
+          "indicatorName": "港股占股票市值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 13,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_convertible_asset_ratio",
+          "indicatorName": "可转债占资产总值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 14,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_convertible_asset_bond_ratio",
+          "indicatorName": "可转债占债券市值比",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 16,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "equity_std",
+          "indicatorName": "股票仓位波动率",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 17,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "equity_range",
+          "indicatorName": "股票仓位相对极差",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 18,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "equity_range_peer_mean",
+          "indicatorName": "股票仓位相对极差同类均值",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 19,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fixed_income_range",
+          "indicatorName": "债券仓位相对极差",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 20,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fixed_income_range_peer_mean",
+          "indicatorName": "债券仓位相对极差同类均值",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 21,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_convertible_range",
+          "indicatorName": "可转债仓位相对极差",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 22,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_convertible_range_peer_mean",
+          "indicatorName": "可转债仓位相对极差同类均值",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 23,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "equity_cv",
+          "indicatorName": "股票仓位变异系数",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 24,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "equity_cv_peer_mean",
+          "indicatorName": "股票仓位变异系数同类均值",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 25,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_convertible_cv",
+          "indicatorName": "可转债仓位变异系数",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 26,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_convertible_cv_peer_mean",
+          "indicatorName": "可转债仓位变异系数同类均值",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 27,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fixed_income_cv",
+          "indicatorName": "债券仓位变异系数",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 28,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fixed_income_cv_peer_mean",
+          "indicatorName": "债券仓位变异系数同类均值",
+          "parentCode": "allocation_indicator",
+          "indicatorLevel": 2,
+          "indicatorSort": 29,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        }
+      ]
+    },
+    {
+      "indicatorCode": "m_performance",
+      "indicatorName": "基金经理业绩指标",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 15,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "intervalReturn_m",
+          "indicatorName": "区间收益率(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 1,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_intervalReturn_m",
+          "indicatorName": "区间收益率同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "geomReturn_m",
+          "indicatorName": "年化收益率(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_geomReturn_m",
+          "indicatorName": "年化收益率同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 6,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "mdd_m",
+          "indicatorName": "最大回撤(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 9,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_mdd_m",
+          "indicatorName": "最大回撤同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 10,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "vol_m",
+          "indicatorName": "年化波动率(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 13,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_vol_m",
+          "indicatorName": "年化波动率同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 14,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "downsideVol_m",
+          "indicatorName": "下行波动率(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 17,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_downsideVol_m",
+          "indicatorName": "下行波动率同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 18,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "VaR_m",
+          "indicatorName": "VaR(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 21,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_VaR_m",
+          "indicatorName": "VaR同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 22,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "sharpe_m",
+          "indicatorName": "Sharpe(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 25,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_sharpe_m",
+          "indicatorName": "Sharpe同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 26,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "calmar_m",
+          "indicatorName": "Calmar(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 29,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_calmar_m",
+          "indicatorName": "Calmar同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 30,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "sortino_m",
+          "indicatorName": "Sortino(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 33,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_sortino_m",
+          "indicatorName": "Sortino同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 34,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "alpha_m",
+          "indicatorName": "Alpha(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 37,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_alpha_m",
+          "indicatorName": "Alpha同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 38,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "beta_m",
+          "indicatorName": "Beta(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 41,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_beta_m",
+          "indicatorName": "Beta同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 42,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "treynor_m",
+          "indicatorName": "Treynor(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 45,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "rank_treynor_m",
+          "indicatorName": "Treynor同类排名(基金经理)",
+          "parentCode": "m_performance",
+          "indicatorLevel": 2,
+          "indicatorSort": 46,
+          "indicatorDataType": "STRING",
+          "children": []
+        }
+      ]
+    },
+    {
+      "indicatorCode": "fund_manager_position_penetration",
+      "indicatorName": "基金经理持仓穿透",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 16,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "wavg_equity_net_asset_ratio_m",
+          "indicatorName": "资产配置-权益占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 1,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_fixed_income_net_asset_ratio_m",
+          "indicatorName": "资产配置-固收占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_money_net_asset_ratio_m",
+          "indicatorName": "资产配置-现金占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 3,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_fund_net_asset_ratio_m",
+          "indicatorName": "资产配置-基金占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 4,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_other_net_asset_ratio_m",
+          "indicatorName": "资产配置-其他占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_stock_hk_connect_net_asset_ratio_m",
+          "indicatorName": "资产配置-港股占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 6,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_bond_convertible_net_asset_ratio_m",
+          "indicatorName": "资产配置-可转债占比(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 7,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "wavg_industry_nav_ratio_m",
+          "indicatorName": "行业配置(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 8,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_beta_m",
+          "indicatorName": "持股风格-Beta(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 9,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_dividend_m",
+          "indicatorName": "持股风格-红利(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 10,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_earning_m",
+          "indicatorName": "持股风格-盈利(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 11,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_growth_m",
+          "indicatorName": "持股风格-成长(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 12,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_leverage_m",
+          "indicatorName": "持股风格-杠杆(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 13,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_liquidity_m",
+          "indicatorName": "持股风格-流动(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 14,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_market_value_m",
+          "indicatorName": "持股风格-市值(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 15,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_mid_m",
+          "indicatorName": "持股风格-中盘(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 16,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_momentum_m",
+          "indicatorName": "持股风格-动量(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 17,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_value_m",
+          "indicatorName": "持股风格-估值(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 18,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "holding_volatility_m",
+          "indicatorName": "持股风格-波动(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 19,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "pe_ttm_m",
+          "indicatorName": "权益绝对特征-市盈率(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 20,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "pb_m",
+          "indicatorName": "权益绝对特征-平均市净率(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 21,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "roe_m",
+          "indicatorName": "权益绝对特征-净资产收益率(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 22,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "net_profit_yoy_m",
+          "indicatorName": "权益绝对特征-净利润增速(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 23,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "dividend_yield_ratio_m",
+          "indicatorName": "权益绝对特征-股息率(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 24,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fund_duration_m",
+          "indicatorName": "债券配置-久期(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 25,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fund_leverage_level_m",
+          "indicatorName": "债券配置-杠杆水平(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 26,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_holding_concentration_m",
+          "indicatorName": "债券配置-债券持仓集中度(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 27,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "top5_bond_duration_m",
+          "indicatorName": "债券配置-前五大重仓久期(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 28,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "bond_type_config_m",
+          "indicatorName": "债券配置-券种配置(基金经理)",
+          "parentCode": "fund_manager_position_penetration",
+          "indicatorLevel": 2,
+          "indicatorSort": 29,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        }
+      ]
+    },
+    {
+      "indicatorCode": "strategy_theme",
+      "indicatorName": "策略主题指标",
+      "parentCode": null,
+      "indicatorLevel": 1,
+      "indicatorSort": 14,
+      "indicatorDataType": null,
+      "children": [
+        {
+          "indicatorCode": "it_e_ret",
+          "indicatorName": "行业主题-年化超额收益率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 1,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "it_e_a_ret",
+          "indicatorName": "行业主题-区间超额收益率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 2,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "it_e_mdd",
+          "indicatorName": "行业主题-超额最大回撤",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 3,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "it_e_vol",
+          "indicatorName": "行业主题-年化超额波动率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 4,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_e_ret",
+          "indicatorName": "指数增强-年化超额收益率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 5,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_e_a_ret",
+          "indicatorName": "指数增强-区间超额收益率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 6,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_e_mdd",
+          "indicatorName": "指数增强-超额最大回撤",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 7,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_e_vol",
+          "indicatorName": "指数增强-年化超额波动率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 8,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "it_purity",
+          "indicatorName": "行业主题-指数成分纯度",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 9,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "it_industry_ratio",
+          "indicatorName": "行业主题-行业绝对偏好",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 10,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "it_e_industry_ratio",
+          "indicatorName": "行业主题-行业相对偏好",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 11,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "i_pct",
+          "indicatorName": "指数增强-指数成分股占比",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 12,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_max_fmi_weight_gap",
+          "indicatorName": "指数增强-最大行业偏离",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 13,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_min_fmi_weight_gap",
+          "indicatorName": "指数增强-最小行业偏离",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 14,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fg_max_fmi_gap",
+          "indicatorName": "指数增强-最大风格偏差",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 15,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fg_min_fmi_gap",
+          "indicatorName": "指数增强-最小风格偏差",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 16,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ig_fmi_weight_gap",
+          "indicatorName": "指数增强-行业偏离",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 17,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "fg_fmi_gap",
+          "indicatorName": "指数增强-风格偏差",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 18,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_participate_rate",
+          "indicatorName": "打新基金-打新参与率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 19,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_win_rate",
+          "indicatorName": "打新基金-打新中签率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 20,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_weekly_win_rate_mean",
+          "indicatorName": "打新基金-周度中签率平均值",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 21,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_weekly_win_rate_std",
+          "indicatorName": "打新基金-周度中签率标准差",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 22,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_stock_allot_number",
+          "indicatorName": "打新基金-获配新股数",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 23,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_abs_return",
+          "indicatorName": "打新基金-打新绝对收益",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 24,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "ipo_ret_attr",
+          "indicatorName": "打新基金-打新收益贡献",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 25,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_ratio_avg",
+          "indicatorName": "量化对冲基金-对冲比率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 26,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_position_selection_contribution_avg",
+          "indicatorName": "量化对冲基金-仓位选择贡献",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 27,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_timing_win_rate_avg",
+          "indicatorName": "量化对冲基金-择时胜率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 28,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_cumsum_alpha_avg",
+          "indicatorName": "量化对冲基金-超额收益",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 29,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_ratio_single",
+          "indicatorName": "量化对冲基金-单期对冲比率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 30,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_is_win_single",
+          "indicatorName": "量化对冲基金-单期择时胜负",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 31,
+          "indicatorDataType": "STRING",
+          "children": []
+        },
+        {
+          "indicatorCode": "hedge_position_selection_contribution_single",
+          "indicatorName": "量化对冲基金-单期仓位选择贡献",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 32,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "aq_coefficient",
+          "indicatorName": "主动量化基金-相关系数",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 33,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "aq_e_ret",
+          "indicatorName": "主动量化基金-年化超额收益率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 34,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "aq_e_a_ret",
+          "indicatorName": "主动量化基金-区间超额收益率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 35,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "aq_e_mdd",
+          "indicatorName": "主动量化基金-超额最大回撤",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 36,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        },
+        {
+          "indicatorCode": "aq_e_vol",
+          "indicatorName": "主动量化基金-年化超额波动率",
+          "parentCode": "strategy_theme",
+          "indicatorLevel": 2,
+          "indicatorSort": 37,
+          "indicatorDataType": "NUMBER",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "msg": "操作成功"
+}
