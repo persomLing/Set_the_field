@@ -2,9 +2,12 @@ import {
   CopyOutlined,
   DeleteOutlined,
   FolderAddOutlined,
+  FolderOutlined,
+  HomeOutlined,
+  PlusOutlined,
   UnorderedListOutlined,
 } from '@ant-design/icons';
-import { Button } from 'antd';
+import { Button, Popover } from 'antd';
 import _ from 'loadsh';
 import { observer } from 'mobx-react';
 import { Component } from 'react';
@@ -22,6 +25,10 @@ class TableContent extends Component<{ store: any }> {
     console.log(v, '---------');
   };
 
+  state = {
+    open: false,
+  };
+
   hanldeBulkCopy = () => {
     const { copyRightDataValue, RightDatchData } = this.props.store;
     console.log(_.cloneDeep(RightDatchData), '-----');
@@ -33,8 +40,41 @@ class TableContent extends Component<{ store: any }> {
     deleteRightDataValue(RightDatchData, true);
   };
 
+  PopoverContent = () => {
+    const { getRightData, addFolder } = this.props.store;
+    const folderRes = _.filter(getRightData, (v: any) => _.get(v, 'children'));
+    const onclick = () => {
+      this.setState({ open: false });
+    };
+    return (
+      <div className={styles.popoverContent}>
+        <p onClick={onclick}>
+          <HomeOutlined style={{ marginRight: 8 }} /> 根目录
+        </p>
+        {_.map(folderRes, (v: any) => {
+          return (
+            <p onClick={onclick}>
+              <FolderOutlined style={{ marginRight: 8 }} />
+              {_.get(v, 'parentName')}
+            </p>
+          );
+        })}
+        <Button
+          type="dashed"
+          onClick={() => {
+            addFolder();
+            this.setState({ open: false });
+          }}
+        >
+          <PlusOutlined style={{ marginRight: 5 }} />
+          添加文件夹
+        </Button>
+      </div>
+    );
+  };
+
   render() {
-    const { getRightData } = this.props.store;
+    const { getRightData, addFolder } = this.props.store;
 
     console.log(_.cloneDeep(getRightData), '//////');
 
@@ -42,7 +82,7 @@ class TableContent extends Component<{ store: any }> {
       <div className={styles.tableContent}>
         <div className={styles.headerSeash}>
           <span className={styles.headSpan}>(3/3)表格展示内容</span>
-          <Button type="primary">
+          <Button type="primary" onClick={addFolder}>
             <FolderAddOutlined style={{ marginLeft: 5 }} /> 添加文件夹
           </Button>
         </div>
@@ -69,10 +109,21 @@ class TableContent extends Component<{ store: any }> {
             <DeleteOutlined style={{ marginRight: 5 }} />
             批量删除
           </Button>
-          <Button type="dashed">
-            <UnorderedListOutlined style={{ marginRight: 5 }} />
-            批量移动至
-          </Button>
+
+          <Popover
+            content={this.PopoverContent()}
+            placement={'topRight'}
+            title="Title"
+            trigger="click"
+            overlayClassName={styles.popoverUnordered}
+            open={this.state.open}
+            onOpenChange={(bol) => this.setState({ open: bol })}
+          >
+            <Button type="dashed" onClick={() => this.setState({ open: true })}>
+              <UnorderedListOutlined style={{ marginRight: 5 }} />
+              批量移动至
+            </Button>
+          </Popover>
         </div>
       </div>
     );

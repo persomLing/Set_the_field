@@ -5,7 +5,7 @@ import {
   FolderOutlined,
   UnorderedListOutlined,
 } from '@ant-design/icons';
-import { Input } from 'antd';
+import { Input, message } from 'antd';
 import _ from 'lodash';
 import { observer } from 'mobx-react';
 import { Component } from 'react';
@@ -41,6 +41,18 @@ class Folder extends Component<propsType> {
   };
 
   handleClick = () => {
+    const { store, parentName } = this.props;
+    // this.state.parentValue
+    if (!this.state.parentValue) {
+      message.warning('请输入正确内容！');
+    }
+    if (this.state.parentValue !== parentName) {
+      store.setRightData({
+        parentName: this.state.parentValue,
+        lastparentName: parentName,
+      });
+    }
+
     this.setState({ editOutlinedBol: false });
   };
 
@@ -57,18 +69,20 @@ class Folder extends Component<propsType> {
   render() {
     const { parentName, children, store } = this.props;
     const { editOutlinedBol, parentValue } = this.state;
+
+    const bol = editOutlinedBol || _.isUndefined(parentName);
     return (
       <div className={styles.folderBox}>
         <section className={styles.parentBox}>
           <header
             style={{
-              display: editOutlinedBol ? 'flex' : 'block',
-              width: editOutlinedBol ? '100%' : 'auto',
+              display: bol ? 'flex' : 'block',
+              width: bol ? '100%' : 'auto',
             }}
           >
             <FolderOutlined style={{ marginRight: 5 }} />
 
-            {editOutlinedBol ? (
+            {bol ? (
               <>
                 <Input
                   value={parentValue}
@@ -84,7 +98,7 @@ class Folder extends Component<propsType> {
               parentValue || ''
             )}
           </header>
-          {!editOutlinedBol && (
+          {!bol && (
             <div className={styles.operateBox}>
               <EditOutlined
                 style={{ cursor: 'pointer' }}

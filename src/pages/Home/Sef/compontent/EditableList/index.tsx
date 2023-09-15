@@ -42,6 +42,10 @@ class EditableList extends Component<Props> {
     // 编辑值 setRightData
     // ......
 
+    // if(_.isEqual(newParams, indicatorParam) && ){
+
+    // }
+
     store.setRightData({
       ...param,
       customName: customLabel,

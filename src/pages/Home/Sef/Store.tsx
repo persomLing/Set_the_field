@@ -1,3 +1,4 @@
+import { message } from 'antd';
 import _ from 'lodash';
 import { action, computed, makeObservable, observable } from 'mobx';
 
@@ -98,6 +99,8 @@ const setNewRightData = (res: any[]) => {
 };
 
 class Store {
+  //-------------------------右侧操作部分-----------------
+
   RightData: any = setNewRightData(_.flatten(data));
 
   get getRightData() {
@@ -146,17 +149,33 @@ class Store {
     const parentName = _.get(value, 'parentName');
     const customName = _.get(value, 'customName');
     const lastCustomLabel = _.get(value, 'lastCustomLabel');
-    // const lastparentName = _.get(value, 'lastparentName');
+    const lastparentName = _.get(value, 'lastparentName');
     console.log('s', _.cloneDeep(value));
     const nowRightData = _.cloneDeep(this.RightData);
     if (_.isNull(parentName)) {
+      const otherRes = nowRightData?.get(parentName);
+      if (otherRes) {
+        message.warning('该名称已被占用！');
+        return;
+      }
       nowRightData?.delete(`${lastCustomLabel}&&${parentName}`);
       nowRightData?.set(
         `${customName}&&${parentName}`,
         _.omit(value, ['lastCustomLabel', 'lastparentName']),
       );
     } else if (_.isUndefined(customName)) {
-      // const nowRes = nowRightData?.get(lastparentName)
+      const nowRes = nowRightData?.get(lastparentName);
+
+      const otherRes = nowRightData?.get(parentName);
+      if (otherRes) {
+        message.warning('该文件夹名称已被占用！');
+      } else {
+        const children = _.map(nowRes?.children || [], (o) => {
+          return { ...o, parentName };
+        });
+        nowRightData?.delete(lastparentName);
+        nowRightData.set(parentName, { ...nowRes, parentName, children });
+      }
     } else {
     }
     this.RightData = nowRightData;
@@ -296,10 +315,90 @@ class Store {
     this.RightData = nowRightData;
   };
 
+  // 添加文件夹
+  addFolder = () => {
+    const nowRightData = _.cloneDeep(this.RightData);
+
+    const res = nowRightData.get(undefined);
+    if (res) {
+      message.warning('一次最多添加一个文件！');
+      return;
+    }
+    let size: any = -nowRightData.size;
+    const sort = _.get(this.getRightData, '0.sort', 0) * 1;
+
+    if (sort >= size && sort !== 0) {
+      size = `${_.ceil(sort * 0.8, 4)}`;
+    }
+    nowRightData.set(undefined, {
+      parentName: undefined,
+      sort: `${size}`,
+      children: [],
+    });
+    this.RightData = nowRightData;
+  };
+
+  // ---------------------左侧操作部分-----------------------
+
+  // 搜索
+  CascaderValue = {};
+
+  // 参数配置记录 只记录5次
+  historyRecordArray: any[] = [];
+
+  // 展示的配置参数
+  showContent: any = {};
+
+  setCascaderData = (v: any) => {
+    this.CascaderValue = v;
+
+    // 记录
+    const lastHistoryRecord = [...this.historyRecordArray, v];
+
+    if (_.size(lastHistoryRecord) > 5) {
+      lastHistoryRecord.shift();
+    }
+    const newRes = _.map(lastHistoryRecord, (v, i) => {
+      return { ...v, sort: i };
+    });
+    this.historyRecordArray = newRes;
+    this.showContent = _.last(newRes);
+  };
+
+  // left
+
+  handleLeft = () => {
+    const num = _.size(this.historyRecordArray);
+    const showContentSort = _.get(this.showContent, 'sort');
+    if (num <= 1 || showContentSort <= 0) return;
+    const sort = _.get(this.showContent, 'sort') || 1;
+    const nowContent = _.find(this.historyRecordArray, ['sort', sort - 1]);
+    this.CascaderValue = nowContent;
+    this.showContent = nowContent;
+  };
+
+  // right
+
+  handleRight = () => {
+    const num = _.size(this.historyRecordArray);
+    const showContentSort = _.get(this.showContent, 'sort');
+    if (num <= 1 || showContentSort === num - 1) return;
+    const sort = _.get(this.showContent, 'sort') || 1;
+    const nowContent = _.find(this.historyRecordArray, ['sort', sort + 1]);
+    this.CascaderValue = nowContent;
+    this.showContent = nowContent;
+  };
+
   constructor() {
     makeObservable(this, {
       RightData: observable,
+      showContent: observable,
+      CascaderValue: observable,
       RightDatchData: observable,
+      addFolder: action.bound,
+      handleLeft: action.bound,
+      handleRight: action.bound,
+      setCascaderData: action.bound,
       steRightDatchData: action.bound,
       setRightData: action.bound,
       getRightData: computed,

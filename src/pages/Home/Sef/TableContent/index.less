@@ -1,67 +1,96 @@
-.tableContent{
-    position: relative;
-    width: 422px;
-    height: 470px;
-    padding: 10px;
-    border: 1px solid #E8E8E8;
-    border-radius: 0 4px 4px 0;
+.tableContent {
+  position: relative;
+  width: 422px;
+  height: 470px;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  border-radius: 0 4px 4px 0;
 }
 
-.headSpan{
-    color: #14100B;
-    font-weight: 500;
+.headSpan {
+  color: #14100b;
+  font-weight: 500;
 }
 
-.headerSeash{
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid #D2D2D2;
-    padding-bottom: 16px;
+.headerSeash {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d2d2d2;
+  padding-bottom: 16px;
 
-    :global{
-        .ant-btn{
-            display: flex;
-            width: 110px;
-            height: 24px;
-            align-items: center;
-            justify-content: center;
-        }
+  :global {
+    .ant-btn {
+      display: flex;
+      width: 110px;
+      height: 24px;
+      align-items: center;
+      justify-content: center;
     }
+  }
 }
 
-.paramList{
+.paramList {
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding-top: 8px;
+
+  p {
+    padding: 3px 8px;
+    color: #14100b;
+    background: #f4f4f4;
+    border-radius: 2px;
+    font-weight: 400;
+    margin: 0;
+    margin-top: 8px;
+  }
+}
+
+.addtotable {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 66px;
+  padding: 16px;
+  box-shadow: 0 -2px 8px 0 #1111110d;
+
+  :global {
+    .ant-btn-dashed {
+      width: 32%;
+      height: 100%;
+    }
+  }
+}
+
+.popoverUnordered {
+  :global {
+    .ant-popover-title {
+      display: none;
+    }
+
+    .ant-popover-arrow {
+      display: none;
+    }
+  }
+}
+
+.popoverContent {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+
+  p {
     width: 100%;
-    height: 350px;
-    overflow: hidden;
-    overflow-y: auto;
-    padding-top: 8px;
+    margin-bottom: 4px;
+    cursor: pointer;
 
-    p{
-        padding: 3px 8px;
-        color: #14100B;
-        background: #F4F4F4;
-        border-radius: 2px;
-        font-weight: 400;
-        margin: 0;
-        margin-top: 8px;
+    &:hover {
+      background: #fff7eb;
     }
-}
-
-.addtotable{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 66px;
-    padding: 16px;
-    box-shadow: 0 -2px 8px 0 #1111110d;
-
-    :global{
-        .ant-btn-dashed{
-            width: 32%;
-            height: 100%;
-        }
-    }
+  }
 }

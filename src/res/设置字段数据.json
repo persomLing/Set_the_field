@@ -1,11 +1,12 @@
 [
   {
     "key": "0",
-    "indicatorCode": "alpha",
-    "indicatorName": "Alpha",
-    "indicatorDataType": "NUMBER",
+    "indicatorCode": "alpha", //
+    "indicatorName": "Alpha", //
+    "indicatorDataType": "NUMBER", //
     "default": false,
     "indicatorParams": {
+      //
       "code": "000300.CSI_LAST_YEAR",
       "name": "沪深300,近一年"
     },
