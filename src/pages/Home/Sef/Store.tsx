@@ -134,7 +134,11 @@ class Store {
   ) => {
     let datchData: any = [];
     if (!isNotDelete) {
+      //
       datchData = _.filter(this.RightDatchData, (v) => {
+        if (_.isNil(res?.customName)) {
+          return v.parentName !== res.parentName;
+        }
         return !_.isEqual(v, res);
       });
     } else {
@@ -227,7 +231,7 @@ class Store {
       }
 
       if (isparentName) {
-        const alterChildren = _.map(nowRes.children, (o, i) => {
+        const alterChildren = _.map(nowRes?.children, (o, i) => {
           return { ...o, parentName: newParentName, sort: `${sort}-${i}` };
         });
         nowRightData?.set(newParentName);
@@ -280,7 +284,7 @@ class Store {
     this.RightData = nowRightData;
   };
 
-  // 删除内容
+  // 删除内容 也要删掉 存储在RightDatchData的值
   deleteRightDataValue = (
     value: { parentName: string | null; customName: string }[],
     isBulk = false,
@@ -305,7 +309,7 @@ class Store {
           parentName: v.parentName,
         });
       }
-      this.steRightDatchData(v, true);
+      this.steRightDatchData(v, false);
     });
 
     if (isBulk) {
@@ -336,6 +340,49 @@ class Store {
       children: [],
     });
     this.RightData = nowRightData;
+  };
+
+  // 批量移动
+  bulkMovement = (parent: string | null) => {
+    const nowRightData = _.cloneDeep(this.RightData);
+    const moveData = nowRightData.get(parent);
+    const children = _.get(moveData, 'children', []);
+    _.forEach(this.RightDatchData, (v) => {
+      const { parentName, customName } = v;
+      if (parentName !== parent) {
+        if (parentName === null && parent !== null) {
+          const data = nowRightData.get(`${customName}&&${parentName}`);
+          nowRightData.delete(`${customName}&&${parentName}`);
+
+          children.push({ ...data, parentName: parent });
+        }
+
+        if (parentName && parentName !== parent) {
+          const data = nowRightData.get(parentName);
+          let obj: any = {};
+          const nowChildren = _.filter(_.get(data, 'children'), (o) => {
+            if (o.customName === customName) {
+              obj = o;
+            }
+            return o.customName !== customName;
+          });
+          nowRightData.set(parentName, { ...data, children: nowChildren });
+
+          const newData = { ...obj, parentName: parent };
+          if (parent === null) {
+            nowRightData.set(`${customName}&&${null}`, newData);
+          } else {
+            children.push(newData);
+          }
+        }
+      }
+    });
+
+    if (parent !== null) {
+      nowRightData.set(parent, { ...moveData, children });
+    }
+    this.RightData = nowRightData;
+    this.RightDatchData = [];
   };
 
   // ---------------------左侧操作部分-----------------------
@@ -398,6 +445,7 @@ class Store {
       addFolder: action.bound,
       handleLeft: action.bound,
       handleRight: action.bound,
+      bulkMovement: action.bound,
       setCascaderData: action.bound,
       steRightDatchData: action.bound,
       setRightData: action.bound,

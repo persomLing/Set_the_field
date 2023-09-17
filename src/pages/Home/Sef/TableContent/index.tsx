@@ -21,7 +21,7 @@ import styles from './index.less';
 // }
 
 class TableContent extends Component<{ store: any }> {
-  paramOnChange = (v) => {
+  paramOnChange = (v: any) => {
     console.log(v, '---------');
   };
 
@@ -41,19 +41,20 @@ class TableContent extends Component<{ store: any }> {
   };
 
   PopoverContent = () => {
-    const { getRightData, addFolder } = this.props.store;
+    const { getRightData, addFolder, bulkMovement } = this.props.store;
     const folderRes = _.filter(getRightData, (v: any) => _.get(v, 'children'));
-    const onclick = () => {
+    const onclick = (parentName: string | null) => {
+      bulkMovement(parentName);
       this.setState({ open: false });
     };
     return (
       <div className={styles.popoverContent}>
-        <p onClick={onclick}>
+        <p onClick={() => onclick(null)}>
           <HomeOutlined style={{ marginRight: 8 }} /> 根目录
         </p>
         {_.map(folderRes, (v: any) => {
           return (
-            <p onClick={onclick}>
+            <p onClick={() => onclick(_.get(v, 'parentName'))}>
               <FolderOutlined style={{ marginRight: 8 }} />
               {_.get(v, 'parentName')}
             </p>
